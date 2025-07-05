@@ -40,12 +40,11 @@ The plugin supports two modes:
 
 ## System Requirements
 
-- **Cinema 4D**: Version 2024 or newer.
+- **Cinema 4D**: Version 2023.2.2 or newer.
 - **Operating System**: Windows, macOS, or Linux.
-- **ComfyUI**: Installed locally or accessible via a server (default: `http://127.0.0.1:8000`).
-- **Python**: Required for running the ComfyUI server (Python 3.7+ recommended).
+- **ComfyUI**: Installed locally across all versions: Git, Portable, and Desktop builds.
+- **Python**: Required for running the ComfyUI server (automatically handled by the ComfyUI).
 - **Internet Connection**: Required for activation and optional ComfyUI downloads.
-- **Dependencies**: Libraries like `requests`, `deep_translator`, `Pillow`, and `websocket-client` (automatically handled by the plugin).
 
 ---
 
@@ -68,21 +67,21 @@ The plugin supports two modes:
 
 4. **Activate the Plugin**:
    - Open the plugin in Cinema 4D (see [Initial Setup](#initial-setup)).
-   - Sign in with your Boosty email to activate the plugin. A 30-day trial starts upon activation, after which a subscription may be required.
+   - Sign in with your Boosty email to activate the plugin. A 5-day trial starts upon activation, after which a subscription may be required. Paid subscriptions have a period as long as your Boosty subscription is active.
 
 ---
 
 ## Initial Setup
 
 1. **Open the Plugin**:
-   - In Cinema 4D, go to **Plugins > C4D to ComfyUI** to open the plugin window.
+   - In Cinema 4D, go to **Extensions > C4D to ComfyUI** to open the plugin window.
    - The plugin interface will appear with the title "C4D to ComfyUI (0.1.11)".
 
 2. **Configure Settings**:
    - Go to **Settings > Open Settings** in the plugin menu.
    - In the **Settings Dialog**, configure:
      - **Boosty Email**: Enter your email for activation (if not activated).
-     - **Port**: Set the ComfyUI server port (default: `8000`).
+     - **Port**: Set the port for the C4D to ComfyUI plugin (default: `8000`). **Important**: Ensure this port is different from the ComfyUI server port (typically `8188` for ComfyUI) to avoid conflicts. For example, if ComfyUI uses `8188`, set the plugin port to `8000` or another unused port.
      - **ComfyUI Path**: Specify the path to your ComfyUI installation (e.g., `C:\ComfyUI` on Windows).
      - **Model Base Path**: Set the path to ComfyUI models (e.g., `C:\ComfyUI\models`).
      - **Input/Output Paths**: Define where input and output images are saved (e.g., `C:\ComfyUI\input` and `C:\ComfyUI\output`).
@@ -279,7 +278,7 @@ The plugin interface is divided into several sections:
 
 - **Developer Contact**: [inevestenko@gmail.com](mailto:inevestenko@gmail.com)
 - **Boosty Subscription**: [https://boosty.to/inevestenko](https://boosty.to/inevestenko)
-- **Session Status**: Check remaining days in **Help > About** (30-day trial from activation).
+- **Session Status**: Check remaining days in **Help > About** (30-days from release).
 - **Documentation**: Refer to this guide or visit the Boosty page for updates.
 
 For additional help, include error messages and steps to reproduce the issue when contacting support.
